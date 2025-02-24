@@ -1,0 +1,462 @@
+* {
+    font-family: "Phudu", serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: white;
+    overflow-x: hidden;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    top: 0;
+}
+
+nav img {
+    width: 100px;
+    margin-left: 8px;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+button {
+    font-family: "Phudu", serif;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: #EF07EF;
+    box-shadow: 4px 4px 4px #ac06ac;
+    width: 120px;
+    height: 40px;
+    padding: 3px 6px;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+}
+
+button:hover {
+    transform: translateY(-5px);
+}
+
+.body-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('empty-dark-room-modern-futuristic-sci-fi-background-3d-illustration.jpg') no-repeat center/cover;
+}
+
+img.shape {
+    position: absolute;
+    width: 150px;
+    bottom: 0;
+    right: 1px;
+    animation: loopAnimation 3s ease-in-out infinite;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 20px;
+    backdrop-filter: blur(20px);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px #EF07EF;
+    padding: 20px;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.image {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    border-radius: 15px;
+}
+
+@keyframes loopAnimation {
+    0% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    100% { transform: translateX(-10px); }
+}
+
+@keyframes loopAnimation2 {
+    0% { transform: translateY(-5px); }
+    50% { transform: translateY(5px); }
+    100% { transform: translateY(-5px); }
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+}
+
+.paragraph {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.484);
+    line-height: 1.6;
+    transition: 0.5s ease-in-out;
+}
+
+.paragraph:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.title {
+    font-size: 25px;
+    color: white;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.content button {
+    background-color: #575757;
+    box-shadow: 4px 4px 4px #353535;
+    color: white;
+    animation: loopAnimation2 3s ease-in-out infinite;
+}
+
+.content button:hover {
+    background-color: white;
+    color: #333;
+}
+
+.technologies-container {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: black;
+    border-top-left-radius: 45px;
+    border-top-right-radius: 45px;
+}
+
+.technologies-container h2 {
+    font-size: 2rem;
+    color: #bb05bb;
+    margin: 50px 0;
+    font-weight: 600;
+}
+
+.technologies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.technology {
+    background: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px #EF07EF;
+    transition: transform 0.3s ease;
+}
+
+.technology:hover {
+    transform: translateY(-10px);
+}
+
+.technology img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.technology h3 {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.technology p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+}
+
+.projects-container {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: black;
+}
+
+.projects-container h2 {
+    font-size: 2rem;
+    color: #bb05bb;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+.projects-grid {
+    display: grid;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.project {
+    background: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px #EF07EF;
+    transition: transform 0.3s ease;
+    text-align: left;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+}
+
+.project h3 {
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.project p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.project-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.project-images img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.project-images img:hover {
+    transform: scale(1.01);
+}
+
+.contact-container {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: black;
+    border-top: 2px solid #EF07EF;
+}
+
+.contact-container h2 {
+    font-size: 2rem;
+    color: #EF07EF;
+    margin-bottom: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    background-color: rgba(239, 7, 239, 0.1);
+    padding: 15px 25px;
+    border-radius: 15px;
+    border: 2px solid #EF07EF;
+    box-shadow: 0 4px 8px rgba(239, 7, 239, 0.3);
+    transition: all 0.3s ease;
+}
+
+.contact-link img {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.contact-link span {
+    font-weight: 500;
+}
+
+.contact-link:hover {
+    background-color: #EF07EF;
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(239, 7, 239, 0.5);
+}
+
+.contact-link:hover img {
+    transform: scale(1.2);
+}
+
+.contact-link:hover span {
+    color: black;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        margin: 10px;
+    }
+
+    .content {
+        padding: 20px;
+        margin-top: 0;
+    }
+
+    .image {
+        max-width: 400px;
+        margin-top: 20px;
+    }
+
+    .title {
+        font-size: 22px;
+    }
+
+    .buttons {
+        gap: 5px;
+    }
+
+    button {
+        width: 100px;
+        font-size: 0.9rem;
+    }
+
+    .technologies-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .technology img {
+        width: 120px;
+    }
+}
+
+@media (max-width: 768px) {
+    .image{
+        display: none;
+    }
+    .buttons {
+        margin-top: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    button {
+        width: 120px;
+        height: 35px;
+        margin: 5px;
+    }
+
+    .body-container {
+        min-height: 80vh;
+        background: none;
+        background-color: black;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .paragraph {
+        font-size: 14px;
+    }
+
+    .technologies-container h2,
+    .projects-container h2,
+    .contact-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .project-images {
+        grid-template-columns: 1fr;
+    }
+
+    img.shape {
+        width: 100px;
+    }
+}
+
+@media (max-width: 579px) {
+    nav img {
+        width: 80px;
+    }
+    .buttons{
+        display: none;
+    }
+    button {
+        width: 120px;
+        height: 30px;
+        font-size: 0.8rem;
+    }
+    .container{
+        margin: 0px;
+        
+    }
+    .title {
+        font-size: 18px;
+        margin: 0px;
+    }
+
+    .paragraph {
+        font-size: 13px;
+    }
+
+    .content {
+        padding: 0px;
+        
+    }
+
+    .image {
+        max-width: 300px;
+    }
+
+    .technologies-container{
+        padding: 0px 10px;
+    }
+    .technologies-grid {
+        grid-template-columns: 1fr;
+    }
+    .technologies-container h2{
+        margin: 0px;
+    }
+
+    .technology img {
+        width: 100px;
+    }
+
+    .contact-link {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .contact-link img {
+        width: 20px;
+        height: 20px;
+    }
+}
