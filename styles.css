@@ -129,6 +129,7 @@ img.shape {
 }
 
 .content button {
+    margin-top: 20px;
     background-color: #575757;
     box-shadow: 4px 4px 4px #353535;
     color: white;
@@ -371,8 +372,7 @@ img.shape {
 
     .body-container {
         min-height: 80vh;
-        background: none;
-        background-color: black;
+        
     }
 
     .container {
@@ -403,11 +403,30 @@ img.shape {
 }
 
 @media (max-width: 579px) {
+    .body-container{
+        min-height: fit-content;
+        
+    
+    }
     nav img {
         width: 80px;
     }
     .buttons{
         display: none;
+    }
+    .technologies-container h2{
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    .projects-container  h2{
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    .project h3{
+        font-size: 18px;
+    }
+    .project p{
+        font-size: 13px;
     }
     button {
         width: 120px;
@@ -415,12 +434,16 @@ img.shape {
         font-size: 0.8rem;
     }
     .container{
-        margin: 0px;
+        margin-top: 130px;
+        align-self: start;
+        box-shadow: none;
+        
+        
         
     }
     .title {
         font-size: 18px;
-        margin: 0px;
+        margin-bottom: 10px;
     }
 
     .paragraph {
@@ -430,6 +453,7 @@ img.shape {
     .content {
         padding: 0px;
         
+        
     }
 
     .image {
@@ -437,21 +461,24 @@ img.shape {
     }
 
     .technologies-container{
-        padding: 0px 10px;
+        padding: 0px 0px;
+        
     }
     .technologies-grid {
         grid-template-columns: 1fr;
-    }
-    .technologies-container h2{
-        margin: 0px;
     }
 
     .technology img {
         width: 100px;
     }
-
+    .technology p{
+        font-size: 13px;
+    }
+    .technology h3{
+        font-size: 18px;
+    }
     .contact-link {
-        font-size: 1rem;
+        font-size: 13px;
         padding: 10px 20px;
     }
 
