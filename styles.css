@@ -10,7 +10,9 @@ body {
     color: white;
     overflow-x: hidden;
 }
-
+.mobilePic{
+    display: none;
+}
 nav {
     display: flex;
     justify-content: space-between;
@@ -154,6 +156,7 @@ img.shape {
     color: #bb05bb;
     margin: 50px 0;
     font-weight: 600;
+    
 }
 
 .technologies-grid {
@@ -184,6 +187,7 @@ img.shape {
 .technology h3 {
     font-size: 1.5rem;
     color: white;
+    margin-bottom: 20px;
 }
 
 .technology p {
@@ -226,9 +230,14 @@ img.shape {
 
 .project h3 {
     font-size: 1.5rem;
-    color: white;
+    background: linear-gradient(5deg,#6b07ef, white,white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; /* For better browser support */
+    color: transparent; /* Ensures fallback for unsupported browsers */
     margin-bottom: 15px;
 }
+
 
 .project p {
     font-size: 1rem;
@@ -317,6 +326,7 @@ img.shape {
 
 /* Media Queries for Responsiveness */
 @media (max-width: 1024px) {
+    
     .container {
         flex-direction: column;
         margin: 10px;
@@ -355,6 +365,11 @@ img.shape {
 }
 
 @media (max-width: 768px) {
+    .mobilePic{
+        display: flex;
+        width: 250px;
+        margin-bottom: 20px;
+    }
     .image{
         display: none;
     }
@@ -371,7 +386,9 @@ img.shape {
     }
 
     .body-container {
-        min-height: 80vh;
+        min-height: fit-content;
+        width: fit-content;
+        margin-top: 100px;
         
     }
 
@@ -403,16 +420,26 @@ img.shape {
 }
 
 @media (max-width: 579px) {
+    .mobilePic{
+        display: flex;
+        width: 250px;
+        margin-bottom: 20px;
+    }
     .body-container{
         min-height: fit-content;
-        
+        width: fit-content;
+        margin-top: 0px;
     
     }
+    
     nav img {
         width: 80px;
     }
     .buttons{
         display: none;
+    }
+    .technologies-container{
+        margin: 0px 20px;
     }
     .technologies-container h2{
         font-size: 18px;
@@ -423,7 +450,7 @@ img.shape {
         margin-bottom: 20px;
     }
     .project h3{
-        font-size: 18px;
+        font-size: 16px;
     }
     .project p{
         font-size: 13px;
@@ -473,9 +500,10 @@ img.shape {
     }
     .technology p{
         font-size: 13px;
+        margin-top: 10px;
     }
     .technology h3{
-        font-size: 18px;
+        font-size: 16px;
     }
     .contact-link {
         font-size: 13px;
@@ -485,5 +513,18 @@ img.shape {
     .contact-link img {
         width: 20px;
         height: 20px;
+    }
+    .contact-container h2{
+        font-size: 16px;
+    }
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

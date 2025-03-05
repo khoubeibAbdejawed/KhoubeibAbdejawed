@@ -3,8 +3,17 @@ document.getElementById("home").addEventListener("click", function() {
     window.scrollTo(0, 0);  
 });
 document.getElementById("projects").addEventListener("click", function() {
-    window.scrollTo(0, 1200);  
+    
+    const contactContainer = document.querySelector(".projects-container");
+
+    
+    contactContainer.scrollIntoView({ behavior: "smooth" });
 });
 document.getElementById("contact").addEventListener("click", function() {
-    window.scrollTo(0, 3000); 
+    
+    const contactContainer = document.querySelector(".contact-container");
+
+    
+    contactContainer.scrollIntoView({ behavior: "smooth" });
 });
+
