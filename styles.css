@@ -4,13 +4,43 @@
     padding: 0;
     box-sizing: border-box;
 }
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1.05);
+        
+    }
+}
+
+.animate {
+    animation: fadeInUp 2s ease-out;
+}
 
 body {
     background-color: black;
     color: white;
     overflow-x: hidden;
 }
-
+.mobilePic{
+    display: none;
+    border-radius: 50%;
+    animation: mobilePicAnimate 3s ease-in-out infinite;
+    border: 3px dashed #EF07EF;
+}
+@keyframes mobilePicAnimate {
+    0%{
+        transform: translateX(10px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+    
+    
+}
 nav {
     display: flex;
     justify-content: space-between;
@@ -76,13 +106,14 @@ img.shape {
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin: 20px;
+    margin-top: 50px;
     backdrop-filter: blur(20px);
     border-radius: 15px;
     box-shadow: 0 4px 8px #EF07EF;
-    padding: 20px;
+    padding: 0px;
     width: 90%;
     max-width: 1200px;
+    
 }
 
 .image {
@@ -90,6 +121,7 @@ img.shape {
     max-width: 550px;
     height: auto;
     border-radius: 15px;
+    
 }
 
 @keyframes loopAnimation {
@@ -123,10 +155,47 @@ img.shape {
 
 .title {
     font-size: 25px;
-    color: white;
+    background: linear-gradient(5deg,#6b07ef, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; /* For better browser support */
+    color: transparent;
     font-weight: 600;
     margin-bottom: 20px;
 }
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+}
+
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 90px;
+    left:0px;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 10px;
+    border-radius: 5px;
+    list-style: none;
+    width: 100%;
+    text-align: center;
+}
+
+.mobile-menu li {
+    margin: 30px 0;
+}
+
+.mobile-menu a {
+    text-decoration: none;
+    color: #ac06ac;
+    font-size: 16px;
+    cursor: pointer;
+    
+}
+
+
 
 .content button {
     margin-top: 20px;
@@ -154,6 +223,7 @@ img.shape {
     color: #bb05bb;
     margin: 50px 0;
     font-weight: 600;
+    
 }
 
 .technologies-grid {
@@ -183,7 +253,12 @@ img.shape {
 
 .technology h3 {
     font-size: 1.5rem;
-    color: white;
+    background: linear-gradient(5deg,#6b07ef, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; /* For better browser support */
+    color: transparent; /* Ensures fallback for unsupported browsers */
+    margin-bottom: 10px;
 }
 
 .technology p {
@@ -226,9 +301,14 @@ img.shape {
 
 .project h3 {
     font-size: 1.5rem;
-    color: white;
+    background: linear-gradient(5deg,#6b07ef, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; /* For better browser support */
+    color: transparent; /* Ensures fallback for unsupported browsers */
     margin-bottom: 15px;
 }
+
 
 .project p {
     font-size: 1rem;
@@ -317,6 +397,7 @@ img.shape {
 
 /* Media Queries for Responsiveness */
 @media (max-width: 1024px) {
+    
     .container {
         flex-direction: column;
         margin: 10px;
@@ -355,23 +436,27 @@ img.shape {
 }
 
 @media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .buttons {
+        display: none;
+    }
+    .mobilePic{
+        display: flex;
+        width: 250px;
+        margin-bottom: 20px;
+    }
     .image{
         display: none;
     }
-    .buttons {
-        margin-top: 10px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    button {
-        width: 120px;
-        height: 35px;
-        margin: 5px;
-    }
 
     .body-container {
-        min-height: 80vh;
+        min-height: fit-content;
+        width: fit-content;
+        margin-top: 100px;
         
     }
 
@@ -403,16 +488,26 @@ img.shape {
 }
 
 @media (max-width: 579px) {
+    .mobilePic{
+        display: flex;
+        width: 250px;
+        margin-bottom: 20px;
+    }
     .body-container{
         min-height: fit-content;
-        
+        width: fit-content;
+        margin-top: 0px;
     
     }
+    
     nav img {
         width: 80px;
     }
     .buttons{
         display: none;
+    }
+    .technologies-container{
+        margin: 0px 20px;
     }
     .technologies-container h2{
         font-size: 18px;
@@ -423,7 +518,7 @@ img.shape {
         margin-bottom: 20px;
     }
     .project h3{
-        font-size: 18px;
+        font-size: 16px;
     }
     .project p{
         font-size: 13px;
@@ -473,9 +568,10 @@ img.shape {
     }
     .technology p{
         font-size: 13px;
+        margin-top: 10px;
     }
     .technology h3{
-        font-size: 18px;
+        font-size: 16px;
     }
     .contact-link {
         font-size: 13px;
@@ -485,5 +581,18 @@ img.shape {
     .contact-link img {
         width: 20px;
         height: 20px;
+    }
+    .contact-container h2{
+        font-size: 16px;
+    }
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
