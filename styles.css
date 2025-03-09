@@ -117,10 +117,16 @@ img.shape {
 }
 
 .image {
-    width: 100%;
-    max-width: 550px;
-    height: auto;
+    inline-size: 400px;
+    block-size: auto;
     border-radius: 15px;
+    border-radius: 300px;
+    margin-block-start: 40px;
+    margin-block-end: 40px;
+    margin-inline-start: 40px;
+    margin-inline-end: 70px;
+    animation: mobilePicAnimate 3s ease-in-out infinite;
+    border: 3px dashed #EF07EF;
     
 }
 
@@ -187,9 +193,11 @@ img.shape {
     margin: 30px 0;
 }
 
-.mobile-menu a {
+.mobile-menu button {
     text-decoration: none;
     color: #ac06ac;
+    background-color: transparent;
+    box-shadow: none;
     font-size: 16px;
     cursor: pointer;
     
