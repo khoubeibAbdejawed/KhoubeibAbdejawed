@@ -48,14 +48,14 @@ nav {
     padding: 20px;
     background-color: black;
     position: fixed;
-    width: 100%;
+    inline-size: 100%;
     z-index: 9999;
-    top: 0;
+    inset-block-start: 0;
 }
 
 nav img {
-    width: 100px;
-    margin-left: 8px;
+    inline-size: 100px;
+    margin-inline-start: 8px;
 }
 
 .buttons {
@@ -70,8 +70,8 @@ button {
     font-weight: 500;
     background-color: #EF07EF;
     box-shadow: 4px 4px 4px #ac06ac;
-    width: 120px;
-    height: 40px;
+    inline-size: 120px;
+    block-size: 40px;
     padding: 3px 6px;
     border-radius: 5px;
     border: 0;
@@ -84,8 +84,8 @@ button:hover {
 }
 
 .body-container {
-    width: 100%;
-    min-height: 100vh;
+    inline-size: 100%;
+    min-block-size: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -94,9 +94,9 @@ button:hover {
 
 img.shape {
     position: absolute;
-    width: 150px;
-    bottom: 0;
-    right: 1px;
+    inline-size: 150px;
+    inset-block-end: 0;
+    inset-inline-end: 1px;
     animation: loopAnimation 3s ease-in-out infinite;
 }
 
@@ -106,13 +106,13 @@ img.shape {
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin-top: 50px;
+    margin-block-start: 50px;
     backdrop-filter: blur(20px);
     border-radius: 15px;
     box-shadow: 0 4px 8px #EF07EF;
     padding: 0px;
-    width: 90%;
-    max-width: 1200px;
+    inline-size: 90%;
+    max-inline-size: 1200px;
     
 }
 
@@ -145,7 +145,7 @@ img.shape {
 .content {
     flex: 1;
     padding: 20px;
-    text-align: left;
+    text-align: start;
 }
 
 .paragraph {
@@ -167,7 +167,7 @@ img.shape {
     background-clip: text; /* For better browser support */
     color: transparent;
     font-weight: 600;
-    margin-bottom: 20px;
+    margin-block-end: 20px;
 }
 .menu-toggle {
     display: none;
@@ -179,13 +179,13 @@ img.shape {
 .mobile-menu {
     display: none;
     position: absolute;
-    top: 90px;
-    left:0px;
+    inset-block-start: 110px;
+    inset-inline-start:0px;
     background: rgba(0, 0, 0, 0.9);
     padding: 10px;
     border-radius: 5px;
     list-style: none;
-    width: 100%;
+    inline-size: 100%;
     text-align: center;
 }
 
@@ -206,7 +206,7 @@ img.shape {
 
 
 .content button {
-    margin-top: 20px;
+    margin-block-start: 20px;
     background-color: #575757;
     box-shadow: 4px 4px 4px #353535;
     color: white;
@@ -222,8 +222,8 @@ img.shape {
     padding: 50px 20px;
     text-align: center;
     background-color: black;
-    border-top-left-radius: 45px;
-    border-top-right-radius: 45px;
+    border-start-start-radius: 45px;
+    border-start-end-radius: 45px;
 }
 
 .technologies-container h2 {
@@ -254,9 +254,9 @@ img.shape {
 }
 
 .technology img {
-    width: 150px;
-    height: auto;
-    margin-bottom: 20px;
+    inline-size: 150px;
+    block-size: auto;
+    margin-block-end: 20px;
 }
 
 .technology h3 {
@@ -266,7 +266,7 @@ img.shape {
     -webkit-text-fill-color: transparent;
     background-clip: text; /* For better browser support */
     color: transparent; /* Ensures fallback for unsupported browsers */
-    margin-bottom: 10px;
+    margin-block-end: 10px;
 }
 
 .technology p {
@@ -284,7 +284,7 @@ img.shape {
 .projects-container h2 {
     font-size: 2rem;
     color: #bb05bb;
-    margin-bottom: 40px;
+    margin-block-end: 40px;
     font-weight: 600;
 }
 
@@ -300,7 +300,7 @@ img.shape {
     border-radius: 10px;
     box-shadow: 0 4px 8px #EF07EF;
     transition: transform 0.3s ease;
-    text-align: left;
+    text-align: start;
 }
 
 .project:hover {
@@ -314,7 +314,7 @@ img.shape {
     -webkit-text-fill-color: transparent;
     background-clip: text; /* For better browser support */
     color: transparent; /* Ensures fallback for unsupported browsers */
-    margin-bottom: 15px;
+    margin-block-end: 15px;
 }
 
 
@@ -322,7 +322,7 @@ img.shape {
     font-size: 1rem;
     color: rgba(255, 255, 255, 0.7);
     line-height: 1.6;
-    margin-bottom: 20px;
+    margin-block-end: 20px;
 }
 
 .project-images {
@@ -332,7 +332,7 @@ img.shape {
 }
 
 .project-images img {
-    width: 100%;
+    inline-size: 100%;
     border-radius: 10px;
     transition: transform 0.3s ease;
 }
@@ -345,13 +345,13 @@ img.shape {
     padding: 50px 20px;
     text-align: center;
     background-color: black;
-    border-top: 2px solid #EF07EF;
+    border-block-start: 2px solid #EF07EF;
 }
 
 .contact-container h2 {
     font-size: 2rem;
     color: #EF07EF;
-    margin-bottom: 40px;
+    margin-block-end: 40px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -379,9 +379,9 @@ img.shape {
 }
 
 .contact-link img {
-    width: 25px;
-    height: 25px;
-    margin-right: 10px;
+    inline-size: 25px;
+    block-size: 25px;
+    margin-inline-end: 10px;
     transition: transform 0.3s ease;
 }
 
@@ -413,12 +413,12 @@ img.shape {
 
     .content {
         padding: 20px;
-        margin-top: 0;
+        margin-block-start: 0;
     }
 
     .image {
-        max-width: 400px;
-        margin-top: 20px;
+        max-inline-size: 400px;
+        margin-block-start: 20px;
     }
 
     .title {
@@ -430,7 +430,7 @@ img.shape {
     }
 
     button {
-        width: 100px;
+        inline-size: 100px;
         font-size: 0.9rem;
     }
 
@@ -439,7 +439,7 @@ img.shape {
     }
 
     .technology img {
-        width: 120px;
+        inline-size: 120px;
     }
 }
 
@@ -454,17 +454,17 @@ img.shape {
     }
     .mobilePic{
         display: flex;
-        width: 250px;
-        margin-bottom: 20px;
+        inline-size: 250px;
+        margin-block-end: 20px;
     }
     .image{
         display: none;
     }
 
     .body-container {
-        min-height: fit-content;
-        width: fit-content;
-        margin-top: 100px;
+        min-block-size: fit-content;
+        inline-size: fit-content;
+        margin-block-start: 100px;
         
     }
 
@@ -491,25 +491,25 @@ img.shape {
     }
 
     img.shape {
-        width: 100px;
+        inline-size: 100px;
     }
 }
 
 @media (max-width: 579px) {
     .mobilePic{
         display: flex;
-        width: 250px;
-        margin-bottom: 20px;
+        inline-size: 250px;
+        margin-block-end: 20px;
     }
     .body-container{
-        min-height: fit-content;
-        width: fit-content;
-        margin-top: 0px;
+        min-block-size: fit-content;
+        inline-size: fit-content;
+        margin-block-start: 0px;
     
     }
     
     nav img {
-        width: 80px;
+        inline-size: 80px;
     }
     .buttons{
         display: none;
@@ -519,11 +519,11 @@ img.shape {
     }
     .technologies-container h2{
         font-size: 18px;
-        margin-bottom: 20px;
+        margin-block-end: 20px;
     }
     .projects-container  h2{
         font-size: 18px;
-        margin-bottom: 20px;
+        margin-block-end: 20px;
     }
     .project h3{
         font-size: 16px;
@@ -532,12 +532,12 @@ img.shape {
         font-size: 13px;
     }
     button {
-        width: 120px;
-        height: 30px;
+        inline-size: 120px;
+        block-size: 30px;
         font-size: 0.8rem;
     }
     .container{
-        margin-top: 130px;
+        margin-block-start: 130px;
         align-self: start;
         box-shadow: none;
         
@@ -546,7 +546,7 @@ img.shape {
     }
     .title {
         font-size: 18px;
-        margin-bottom: 10px;
+        margin-block-end: 10px;
     }
 
     .paragraph {
@@ -560,23 +560,19 @@ img.shape {
     }
 
     .image {
-        max-width: 300px;
+        max-inline-size: 300px;
     }
 
-    .technologies-container{
-        padding: 0px 0px;
-        
-    }
     .technologies-grid {
         grid-template-columns: 1fr;
     }
 
     .technology img {
-        width: 100px;
+        inline-size: 100px;
     }
     .technology p{
         font-size: 13px;
-        margin-top: 10px;
+        margin-block-start: 10px;
     }
     .technology h3{
         font-size: 16px;
@@ -587,8 +583,8 @@ img.shape {
     }
 
     .contact-link img {
-        width: 20px;
-        height: 20px;
+        inline-size: 20px;
+        block-size: 20px;
     }
     .contact-container h2{
         font-size: 16px;

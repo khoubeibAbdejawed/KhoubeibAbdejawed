@@ -1,5 +1,6 @@
 document.getElementById("home").addEventListener("click", function() {
-    window.scrollTo(0, 0);  
+    window.scrollTo(0, 0); 
+    console.log('%c home page ' , 'color:red');
 });
 
 document.getElementById("projects").addEventListener("click", function() {
