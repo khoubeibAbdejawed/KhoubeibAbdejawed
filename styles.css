@@ -27,6 +27,8 @@ body {
 }
 .mobilePic{
     display: none;
+<<<<<<< HEAD
+=======
     border-radius: 50%;
     animation: mobilePicAnimate 3s ease-in-out infinite;
     border: 3px dashed #EF07EF;
@@ -40,6 +42,7 @@ body {
     }
     
     
+>>>>>>> kja
 }
 nav {
     display: flex;
@@ -263,12 +266,17 @@ img.shape {
 
 .technology h3 {
     font-size: 1.5rem;
+<<<<<<< HEAD
+    color: white;
+    margin-bottom: 20px;
+=======
     background: linear-gradient(5deg,#6b07ef, white);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text; /* For better browser support */
     color: transparent; /* Ensures fallback for unsupported browsers */
     margin-block-end: 10px;
+>>>>>>> kja
 }
 
 .technology p {
@@ -311,12 +319,20 @@ img.shape {
 
 .project h3 {
     font-size: 1.5rem;
+<<<<<<< HEAD
+    background: linear-gradient(5deg,#6b07ef, white,white);
+=======
     background: linear-gradient(5deg,#6b07ef, white);
+>>>>>>> kja
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text; /* For better browser support */
     color: transparent; /* Ensures fallback for unsupported browsers */
+<<<<<<< HEAD
+    margin-bottom: 15px;
+=======
     margin-block-end: 15px;
+>>>>>>> kja
 }
 
 
@@ -446,6 +462,12 @@ img.shape {
 }
 
 @media (max-width: 768px) {
+<<<<<<< HEAD
+    .mobilePic{
+        display: flex;
+        width: 250px;
+        margin-bottom: 20px;
+=======
     .menu-toggle {
         display: flex;
         justify-content: center;
@@ -458,15 +480,22 @@ img.shape {
         display: flex;
         inline-size: 250px;
         margin-block-end: 20px;
+>>>>>>> kja
     }
     .image{
         display: none;
     }
 
     .body-container {
+<<<<<<< HEAD
+        min-height: fit-content;
+        width: fit-content;
+        margin-top: 100px;
+=======
         min-block-size: fit-content;
         inline-size: fit-content;
         margin-block-start: 100px;
+>>>>>>> kja
         
     }
 
@@ -500,6 +529,15 @@ img.shape {
 @media (max-width: 579px) {
     .mobilePic{
         display: flex;
+<<<<<<< HEAD
+        width: 250px;
+        margin-bottom: 20px;
+    }
+    .body-container{
+        min-height: fit-content;
+        width: fit-content;
+        margin-top: 0px;
+=======
         inline-size: 250px;
         margin-block-end: 20px;
     }
@@ -507,6 +545,7 @@ img.shape {
         min-block-size: fit-content;
         inline-size: fit-content;
         margin-block-start: 0px;
+>>>>>>> kja
     
     }
     
@@ -574,7 +613,11 @@ img.shape {
     }
     .technology p{
         font-size: 13px;
+<<<<<<< HEAD
+        margin-top: 10px;
+=======
         margin-block-start: 10px;
+>>>>>>> kja
     }
     .technology h3{
         font-size: 16px;
