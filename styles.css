@@ -45,12 +45,14 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 15px;
     background-color: black;
     position: fixed;
     inline-size: 100%;
     z-index: 9999;
     inset-block-start: 0;
+    block-size: 100px;
+    box-shadow: 0 2px 5px #EF07EF;
 }
 
 nav img {
